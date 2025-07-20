@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineReviews - Film Review Website</title>
+    <link rel="stylesheet" href="styles/film-review.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-film"></i>
+                    <span>CineReviews</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                    <li><a href="#top-rated" class="nav-link">Top Rated</a></li>
+                    <li><a href="#genres" class="nav-link">Genres</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search movies...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover Amazing Films</h1>
+            <p>Read honest reviews, discover new movies, and explore the world of cinema</p>
+            <button class="cta-button" onclick="scrollToSection('reviews')">
+                Explore Reviews <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="hero-image">
+            <div class="movie-cards-floating">
+                <div class="floating-card card-1">
+                    <img src="./images/1.jpg" alt="Movie 1">
+                </div>
+                <div class="floating-card card-2">
+                    <img src="./images/2.jpg" alt="Movie 2">
+                </div>
+                <div class="floating-card card-3">
+                    <img src="./images/3.jpg" alt="Movie 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Review -->
+    <section class="featured-review">
+        <div class="container">
+            <h2>Featured Review</h2>
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="./images/4.jpg" alt="Featured Movie">
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>9.2</span>
+                    </div>
+                </div>
+                <div class="featured-content">
+                    <h3>The Cinematic Masterpiece</h3>
+                    <p class="movie-info">
+                        <span class="genre">Drama, Thriller</span>
+                        <span class="year">2024</span>
+                        <span class="duration">148 min</span>
+                    </p>
+                    <p class="review-excerpt">
+                        "A breathtaking journey through human emotions and stunning visuals. This film redefines what cinema can achieve in the modern era. Every frame is meticulously crafted, and the performances are nothing short of extraordinary..."
+                    </p>
+                    <div class="reviewer-info">
+                        <img src="./images/10751558.png" alt="Reviewer" class="reviewer-avatar">
+                        <div>
+                            <span class="reviewer-name">Alex Johnson</span>
+                            <span class="review-date">December 15, 2024</span>
+                        </div>
+                    </div>
+                    <button class="read-more-btn">Read Full Review</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movie Reviews Grid -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Reviews</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="action">Action</button>
+                    <button class="filter-btn" data-filter="drama">Drama</button>
+                    <button class="filter-btn" data-filter="comedy">Comedy</button>
+                    <button class="filter-btn" data-filter="horror">Horror</button>
+                </div>
+            </div>
+            
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Reviews will be dynamically loaded here -->
+            </div>
+            
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Reviews</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Rated Movies -->
+    <section id="top-rated" class="top-rated-section">
+        <div class="container">
+            <h2>Top Rated Movies</h2>
+            <div class="top-rated-grid">
+                <div class="top-movie-card">
+                    <div class="rank">1</div>
+                    <img src="./images/5.jpg" alt="Top Movie 1">
+                    <h4>Epic Adventure</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 9.8
+                    </div>
+                </div>
+                <div class="top-movie-card">
+                    <div class="rank">2</div>
+                    <img src="./images/6.jpg" alt="Top Movie 2">
+                    <h4>Romantic Drama</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 9.6
+                    </div>
+                </div>
+                <div class="top-movie-card">
+                    <div class="rank">3</div>
+                    <img src="./images/7.jpg" alt="Top Movie 3">
+                    <h4>Sci-Fi Thriller</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 9.4
+                    </div>
+                </div>
+                <div class="top-movie-card">
+                    <div class="rank">4</div>
+                    <img src="./images/8.jpg" alt="Top Movie 4">
+                    <h4>Comedy Gold</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 9.2
+                    </div>
+                </div>
+                <div class="top-movie-card">
+                    <div class="rank">5</div>
+                    <img src="./images/9.jpg" alt="Top Movie 5">
+                    <h4>Horror Classic</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 9.1
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Review Modal -->
+    <div id="addReviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Add Your Review</h3>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="movieTitle">Movie Title</label>
+                    <input type="text" id="movieTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewerName">Your Name</label>
+                    <input type="text" id="reviewerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <div class="star-rating">
+                        <i class="fas fa-star" data-rating="1"></i>
+                        <i class="fas fa-star" data-rating="2"></i>
+                        <i class="fas fa-star" data-rating="3"></i>
+                        <i class="fas fa-star" data-rating="4"></i>
+                        <i class="fas fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">Your Review</label>
+                    <textarea id="reviewText" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-film"></i>
+                        <span>CineReviews</span>
+                    </div>
+                    <p>Your ultimate destination for honest movie reviews and cinema insights.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#top-rated">Top Rated</a></li>
+                        <li><a href="#genres">Genres</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CineReviews. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Review Button -->
+    <button class="floating-add-btn" id="addReviewBtn">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <script src="scripts/film-review.js"></script>
+</body>
+</html>

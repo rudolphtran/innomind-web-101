@@ -1,0 +1,78 @@
+/* Cấu hình chung cho body */
+body {
+  background-color: rgb(220, 230, 173); /* Màu nền của trang */
+  font-family: Arial, sans-serif; /* Phông chữ chung */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Thay đổi màu sắc cho h1 */
+h1 {
+  color: #177820;/*HEX*/
+  background-color: yellow; /* Màu nền. Sử dụng tên */
+  opacity: 0.8; /* Độ trong suốt */
+  font-size: 36px; /* Kích thước chữ */
+  text-align: center; /* Căn giữa văn bản */
+  padding: 10px;
+  border-radius: 8px; /* Bo góc cho tiêu đề */
+}
+
+#sub-title-id {
+  text-align: left; /* Căn trái cho tiêu đề phụ */
+  color: rgb(220, 230, 173); /* Màu chữ. Màu RGB*/
+}
+
+.sub-title {
+  text-align: left; /* Căn trái cho các tiêu đề phụ */
+  color: green; /* Màu chữ */
+}
+
+/* Thay đổi màu sắc cho h2 */
+h2 {
+  color: blue; /* Màu chữ */
+  background-color: lightgreen; /* Màu nền */
+  font-size: 28px; /* Kích thước chữ */
+  text-align: center; /* Căn giữa văn bản */
+  padding: 8px;
+  border-radius: 8px; /* Bo góc cho tiêu đề phụ */
+}
+
+/* Thay đổi màu sắc cho các đoạn văn p */
+p {
+  color: purple; /* Màu chữ */
+  font-size: 18px; /* Kích thước chữ */
+  background-color: pink; /* Màu nền */
+  padding: 12px;
+  border-radius: 5px; /* Bo góc cho các đoạn văn */
+  margin-bottom: 10px;
+}
+/* Selector theo ID */
+#unique {
+  font-size: 20px;
+  color: rgb(255, 99, 71);
+  /* Màu đỏ */
+  font-weight: bold;
+}
+
+/* External CSS style (sử dụng selector theo class) */
+.button {
+  background-color: #4caf50;
+  /* Màu xanh lá */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.button:hover {
+  background-color: rgba(76, 175, 80, 0.8);
+  /* Màu nền thay đổi khi hover */
+}
+
+.content{
+  background-color: red;
+  padding: 10px;
+  margin: 10px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnoMind</title>
+
+</head>
+<body>
+
+  <h1>Đăng Ký Khóa học</h1>
+
+  <form action="/submit-form" method="POST">
+	<div>
+		<!-- Họ tên -->
+		<label for="fullname">Họ và Tên</label>
+		<input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên" required/>
+	</div>
+    
+	<div>
+		<!-- Email -->
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" placeholder="Nhập email" required/>
+	</div>
+
+	<div>
+		<!-- Số điện thoại -->
+		<label for="phone">Số điện thoại</label>
+		<input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+	</div>
+	<div>
+		<!-- Ngày sinh -->
+		<label for="dob">Ngày sinh</label>
+		<input type="date" id="dob" name="dob" required>
+	</div>
+	<div>
+		<!-- Giới tính -->
+		<label for="gender">Giới tính</label>
+		<select id="gender" name="gender">
+			<option value="male">Nam</option>
+			<option value="female">Nữ</option>
+			<option value="other">Khác</option>
+		</select>
+	</div>
+	<div>
+		<!-- Lý do tham gia -->
+		<label for="reason">Lý do tham gia</label>
+		<textarea id="reason" name="reason" rows="4" placeholder="Nhập lý do tham gia" required></textarea>
+	</div>
+	<div>
+		<!-- Điều khoản -->
+		<label for="terms">
+			<input type="checkbox" id="terms" name="terms" value="agree" required>
+			Tôi đồng ý với các điều khoản và chính sách
+		</label>
+	</div>
+
+    <!-- Nút gửi -->
+    <button type="submit">Đăng Ký</button>
+  </form>
+
+</body>
+</html>
