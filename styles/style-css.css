@@ -76,3 +76,66 @@ p {
   padding: 10px;
   margin: 10px;
 }
+
+.position-container{
+  position: relative;
+  background-color: lightgray;
+  &> div{
+    width: 100%;
+    height: 100px;
+  }
+}
+
+#position-item-static{
+  /* position: static; */
+  background-color: lightyellow;
+}
+
+#position-item-relative{
+  position: relative;
+  background-color: lightcoral;
+  height: 500px;
+  top:100px;
+}
+
+#position-item-absolute{
+  position: absolute;
+  background-color: lightgreen;
+  width: 100%;
+  height: 100px;
+  top: 500px;
+}
+
+#position-item-fixed{
+  position: fixed;
+  background-color: lightblue;
+  width: 200px;
+  height: 100px;
+  top: 200px;
+  left: 200px;
+}
+
+#position-item-sticky{
+  position: sticky;
+  background-color: lightpink;
+  width: 100%;
+  height: 100px;
+  top: 0;
+}
+
+#position-item-relative-child-absolute{
+  position: absolute;
+  background-color: lightyellow;
+  width: 200px;
+  height: 50px;
+  top: 100px;
+  right: 100px;
+}
+
+#position-item-relative-child-sticky{
+  position: sticky;
+  background-color: rgb(240, 229, 128);
+  width: 200px;
+  height: 50px;
+  top: 0;
+}
