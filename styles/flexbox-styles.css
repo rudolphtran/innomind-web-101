@@ -1,0 +1,45 @@
+/* ===== FLEXBOX STYLES - CÁC STYLE VỀ FLEXBOX ===== */
+
+.flex-box-container {
+  background-color: lightgray; /* Màu nền của container */
+  height: 500px; /* Chiều cao của container bằng chiều cao của viewport */
+  display: flex; /* Thiết lập chế độ Flexbox */
+  flex-direction: row; /*(row | column) Hướng của các phần tử con */
+  //justify-content: space-around; /*khoảng trống giữa các phần tử con và cạnh của container */
+  justify-content: center; /* Căn giữa các phần tử con theo chiều ngang*/
+  //justify-content: flex-start; /* Căn trái các phần tử con theo chiều ngang*/
+  //justify-content: flex-end; /* Căn phải các phần tử con theo chiều ngang */
+  //justify-content: space-between; /* Khoảng cách đều giữa các phần tử con */
+  //justify-content: space-evenly; Khoảng cách đều giữa các phần tử con và cạnh của container */
+
+  flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng nếu không đủ không gian */
+  //flex-wrap: nowrap; /* /* Không cho phép các phần tử con xuống dòng */
+  align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+}
+
+#flex-item-1 {
+  background-color: lightcoral; /* Màu nền của phần tử */
+  flex-grow: 0; /* Phần tử này sẽ chiếm không gian còn lại */
+  flex-shrink: 1; /* Phần tử này sẽ co lại nếu không gian không đủ */
+  flex-basis: 100px; /* Kích thước cơ bản của phần tử*/
+}
+
+#flex-item-2 {
+  background-color: lightblue; /* Màu nền của phần tử */
+  flex-grow: 1; /* Phần tử này sẽ chiếm gấp đôi không gian còn lại */
+  flex-shrink: 1;
+}
+
+#flex-item-3 {
+  background-color: lightgreen; /* Màu nền của phần tử */
+  flex-grow: 0; /* Phần tử này sẽ chiếm gấp ba không gian còn lại */
+}
+
+.flex-item {
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px solid #000; /* Đường viền */
+  width: 100px;
+  height: 50px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation - Hiệu ứng động</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="animation-page">
+    <div class="container">
+        <div class="header">
+            <h1>CSS Animation</h1>
+            <p>Tạo hiệu ứng động phức tạp và ấn tượng cho website</p>
+        </div>
+
+        <div class="content">
+            <!-- Keyframes -->
+            <div class="section">
+                <h2>1. Keyframes - Khung hình chính</h2>
+                <div class="explanation">
+                    <p>Keyframes định nghĩa các trạng thái tại các thời điểm khác nhau trong animation. Có thể dùng phần trăm (0%, 50%, 100%) hoặc từ khóa (from, to).</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>From - To</h4>
+                        <div class="demo-element keyframe-simple">Simple</div>
+                        <p>Chỉ có 2 trạng thái</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Multi Keyframes</h4>
+                        <div class="demo-element keyframe-multi">Multi</div>
+                        <p>Nhiều trạng thái khác nhau</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Complex Path</h4>
+                        <div class="demo-element keyframe-complex">Complex</div>
+                        <p>Đường dẫn phức tạp</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Keyframes với from-to */</span>
+@<span class="property">keyframes</span> <span class="value">simple</span> {
+    <span class="value">from</span> { <span class="property">transform</span>: <span class="value">translateX(0)</span>; }
+    <span class="value">to</span> { <span class="property">transform</span>: <span class="value">translateX(100px)</span>; }
+}
+
+<span class="comment">/* Keyframes với phần trăm */</span>
+@<span class="property">keyframes</span> <span class="value">multi</span> {
+    <span class="value">0%</span> { <span class="property">transform</span>: <span class="value">scale(1)</span>; <span class="property">background</span>: <span class="value">red</span>; }
+    <span class="value">50%</span> { <span class="property">transform</span>: <span class="value">scale(1.5)</span>; <span class="property">background</span>: <span class="value">blue</span>; }
+    <span class="value">100%</span> { <span class="property">transform</span>: <span class="value">scale(1)</span>; <span class="property">background</span>: <span class="value">green</span>; }
+}
+                </div>
+            </div>
+
+            <!-- Animation Properties -->
+            <div class="section">
+                <h2>2. Animation Properties - Thuộc tính Animation</h2>
+                <div class="explanation">
+                    <p>CSS Animation có 8 thuộc tính chính để điều khiển hoạt động:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>animation-name:</strong> Tên keyframes</li>
+                        <li><strong>animation-duration:</strong> Thời gian animation</li>
+                        <li><strong>animation-timing-function:</strong> Hàm thời gian</li>
+                        <li><strong>animation-delay:</strong> Độ trễ</li>
+                        <li><strong>animation-iteration-count:</strong> Số lần lặp</li>
+                        <li><strong>animation-direction:</strong> Hướng animation</li>
+                        <li><strong>animation-fill-mode:</strong> Trạng thái trước/sau</li>
+                        <li><strong>animation-play-state:</strong> Trạng thái phát</li>
+                    </ul>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Cú pháp đầy đủ */</span>
+<span class="property">animation-name</span>: <span class="value">slideIn</span>;
+<span class="property">animation-duration</span>: <span class="value">2s</span>;
+<span class="property">animation-timing-function</span>: <span class="value">ease-in-out</span>;
+<span class="property">animation-delay</span>: <span class="value">0.5s</span>;
+<span class="property">animation-iteration-count</span>: <span class="value">infinite</span>;
+<span class="property">animation-direction</span>: <span class="value">alternate</span>;
+<span class="property">animation-fill-mode</span>: <span class="value">forwards</span>;
+
+<span class="comment">/* Cú pháp ngắn gọn */</span>
+<span class="property">animation</span>: <span class="value">slideIn 2s ease-in-out 0.5s infinite alternate forwards</span>;
+                </div>
+            </div>
+
+            <!-- Duration & Timing -->
+            <div class="section">
+                <h2>3. Duration & Timing - Thời gian và Nhịp độ</h2>
+                <div class="explanation">
+                    <p>Duration và timing function kiểm soát tốc độ và cách thức animation diễn ra.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Fast (0.5s)</h4>
+                        <div class="demo-element anim-duration-fast">Fast</div>
+                        <p>Animation nhanh</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Normal (1s)</h4>
+                        <div class="demo-element anim-duration-normal">Normal</div>
+                        <p>Animation bình thường</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Slow (3s)</h4>
+                        <div class="demo-element anim-duration-slow">Slow</div>
+                        <p>Animation chậm</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Ease-in-out</h4>
+                        <div class="demo-element anim-timing-ease">Smooth</div>
+                        <p>Timing function mượt mà</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Duration Examples */</span>
+.<span class="property">fast</span> { <span class="property">animation</span>: <span class="value">bounce 0.5s infinite</span>; }
+.<span class="property">normal</span> { <span class="property">animation</span>: <span class="value">bounce 1s infinite</span>; }
+.<span class="property">slow</span> { <span class="property">animation</span>: <span class="value">bounce 3s infinite</span>; }
+
+<span class="comment">/* Timing Functions */</span>
+.<span class="property">smooth</span> { <span class="property">animation</span>: <span class="value">slide 2s ease-in-out infinite</span>; }
+                </div>
+            </div>
+
+            <!-- Iteration & Direction -->
+            <div class="section">
+                <h2>4. Iteration & Direction - Lặp lại và Hướng</h2>
+                <div class="explanation">
+                    <p>Kiểm soát số lần lặp và hướng của animation.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Infinite</h4>
+                        <div class="demo-element anim-infinite">∞</div>
+                        <p>Lặp vô hạn</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>3 times</h4>
+                        <div class="demo-element anim-count-3">3x</div>
+                        <p>Chỉ lặp 3 lần</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Alternate</h4>
+                        <div class="demo-element anim-alternate">Alt</div>
+                        <p>Qua lại</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Reverse</h4>
+                        <div class="demo-element anim-reverse">Rev</div>
+                        <p>Ngược lại</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Iteration Count */</span>
+<span class="property">animation-iteration-count</span>: <span class="value">infinite</span>; <span class="comment">/* Vô hạn */</span>
+<span class="property">animation-iteration-count</span>: <span class="value">3</span>; <span class="comment">/* 3 lần */</span>
+
+<span class="comment">/* Direction */</span>
+<span class="property">animation-direction</span>: <span class="value">normal</span>; <span class="comment">/* Bình thường */</span>
+<span class="property">animation-direction</span>: <span class="value">reverse</span>; <span class="comment">/* Ngược lại */</span>
+<span class="property">animation-direction</span>: <span class="value">alternate</span>; <span class="comment">/* Qua lại */</span>
+<span class="property">animation-direction</span>: <span class="value">alternate-reverse</span>; <span class="comment">/* Qua lại ngược */</span>
+                </div>
+            </div>
+
+            <!-- Fill Mode & Delay -->
+            <div class="section">
+                <h2>5. Fill Mode & Delay - Chế độ và Độ trễ</h2>
+                <div class="explanation">
+                    <p>Fill mode quyết định trạng thái của element trước và sau animation. Delay tạo độ trễ trước khi bắt đầu.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Forwards</h4>
+                        <div class="demo-element anim-forwards">Forward</div>
+                        <p>Giữ trạng thái cuối</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Backwards</h4>
+                        <div class="demo-element anim-backwards">Backward</div>
+                        <p>Áp dụng trạng thái đầu</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Both</h4>
+                        <div class="demo-element anim-both">Both</div>
+                        <p>Cả hai chế độ</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Delay 1s</h4>
+                        <div class="demo-element anim-delay">Delay</div>
+                        <p>Trễ 1 giây</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Fill Mode */</span>
+<span class="property">animation-fill-mode</span>: <span class="value">none</span>; <span class="comment">/* Không giữ trạng thái */</span>
+<span class="property">animation-fill-mode</span>: <span class="value">forwards</span>; <span class="comment">/* Giữ trạng thái cuối */</span>
+<span class="property">animation-fill-mode</span>: <span class="value">backwards</span>; <span class="comment">/* Áp dụng trạng thái đầu */</span>
+<span class="property">animation-fill-mode</span>: <span class="value">both</span>; <span class="comment">/* Cả hai */</span>
+
+<span class="comment">/* Delay */</span>
+<span class="property">animation-delay</span>: <span class="value">1s</span>; <span class="comment">/* Trễ 1 giây */</span>
+                </div>
+            </div>
+
+            <!-- Popular Animations -->
+            <div class="section">
+                <h2>6. Popular Animations - Hiệu ứng phổ biến</h2>
+                <div class="explanation">
+                    <p>Các hiệu ứng animation thường được sử dụng trong thiết kế web.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Bounce</h4>
+                        <div class="demo-element anim-bounce">Bounce</div>
+                        <p>Hiệu ứng nảy</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Shake</h4>
+                        <div class="demo-element anim-shake">Shake</div>
+                        <p>Hiệu ứng lắc</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Pulse</h4>
+                        <div class="demo-element anim-pulse">Pulse</div>
+                        <p>Hiệu ứng nhịp đập</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Rotate</h4>
+                        <div class="demo-element anim-rotate">Rotate</div>
+                        <p>Hiệu ứng xoay</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Fade In</h4>
+                        <div class="demo-element anim-fadeIn">Fade In</div>
+                        <p>Hiện từ từ</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Slide In</h4>
+                        <div class="demo-element anim-slideIn">Slide In</div>
+                        <p>Trượt vào</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Scale</h4>
+                        <div class="demo-element anim-scale">Scale</div>
+                        <p>Thay đổi kích thước</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Float</h4>
+                        <div class="demo-element anim-float">Float</div>
+                        <p>Hiệu ứng bay</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Bounce Animation */</span>
+@<span class="property">keyframes</span> <span class="value">bounce</span> {
+    <span class="value">0%, 20%, 50%, 80%, 100%</span> { <span class="property">transform</span>: <span class="value">translateY(0)</span>; }
+    <span class="value">40%</span> { <span class="property">transform</span>: <span class="value">translateY(-30px)</span>; }
+    <span class="value">60%</span> { <span class="property">transform</span>: <span class="value">translateY(-15px)</span>; }
+}
+
+<span class="comment">/* Shake Animation */</span>
+@<span class="property">keyframes</span> <span class="value">shake</span> {
+    <span class="value">0%, 100%</span> { <span class="property">transform</span>: <span class="value">translateX(0)</span>; }
+    <span class="value">25%</span> { <span class="property">transform</span>: <span class="value">translateX(-5px)</span>; }
+    <span class="value">75%</span> { <span class="property">transform</span>: <span class="value">translateX(5px)</span>; }
+}
+                </div>
+            </div>
+
+            <!-- Loading Animations -->
+            <div class="section">
+                <h2>7. Loading Animations - Hiệu ứng tải</h2>
+                <div class="explanation">
+                    <p>Các hiệu ứng loading thường được sử dụng để thông báo quá trình xử lý.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Spinner</h4>
+                        <div class="demo-spinner"></div>
+                        <p>Vòng tròn xoay</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Dots</h4>
+                        <div class="demo-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <p>Ba chấm nhảy</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Progress</h4>
+                        <div class="demo-progress-anim">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <p>Thanh tiến trình</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Heartbeat</h4>
+                        <div class="demo-element anim-heartbeat">♥</div>
+                        <p>Nhịp tim</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Spinner */</span>
+@<span class="property">keyframes</span> <span class="value">spin</span> {
+    <span class="value">0%</span> { <span class="property">transform</span>: <span class="value">rotate(0deg)</span>; }
+    <span class="value">100%</span> { <span class="property">transform</span>: <span class="value">rotate(360deg)</span>; }
+}
+
+<span class="comment">/* Dots Animation */</span>
+@<span class="property">keyframes</span> <span class="value">dotBounce</span> {
+    <span class="value">0%, 80%, 100%</span> { <span class="property">transform</span>: <span class="value">scale(0.8)</span>; }
+    <span class="value">40%</span> { <span class="property">transform</span>: <span class="value">scale(1.2)</span>; }
+}
+                </div>
+            </div>
+
+            <!-- Text Animations -->
+            <div class="section">
+                <h2>8. Text Animations - Hiệu ứng chữ</h2>
+                <div class="explanation">
+                    <p>Các hiệu ứng animation dành riêng cho text và typography.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Typewriter</h4>
+                        <div class="text-typewriter">Hello World!</div>
+                        <p>Hiệu ứng đánh máy</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Neon</h4>
+                        <div class="text-neon">NEON TEXT</div>
+                        <p>Hiệu ứng đèn neon</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Rainbow</h4>
+                        <div class="text-rainbow">RAINBOW</div>
+                        <p>Hiệu ứng cầu vồng</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Glitch</h4>
+                        <div class="text-glitch" data-text="GLITCH">GLITCH</div>
+                        <p>Hiệu ứng nhiễu</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Typewriter Effect */</span>
+@<span class="property">keyframes</span> <span class="value">typewriter</span> {
+    <span class="value">from</span> { <span class="property">width</span>: <span class="value">0</span>; }
+    <span class="value">to</span> { <span class="property">width</span>: <span class="value">100%</span>; }
+}
+
+<span class="comment">/* Neon Effect */</span>
+@<span class="property">keyframes</span> <span class="value">neon</span> {
+    <span class="value">0%, 100%</span> { <span class="property">text-shadow</span>: <span class="value">0 0 5px #fff, 0 0 10px #fff</span>; }
+    <span class="value">50%</span> { <span class="property">text-shadow</span>: <span class="value">0 0 20px #ff00ff, 0 0 30px #ff00ff</span>; }
+}
+                </div>
+            </div>
+
+            <!-- Advanced Techniques -->
+            <div class="section">
+                <h2>9. Advanced Techniques - Kỹ thuật nâng cao</h2>
+                <div class="explanation">
+                    <p>Các kỹ thuật animation nâng cao kết hợp nhiều hiệu ứng.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Morphing</h4>
+                        <div class="demo-morph"></div>
+                        <p>Biến đổi hình dạng</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Particle</h4>
+                        <div class="demo-particle">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                        <p>Hiệu ứng hạt</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Wave</h4>
+                        <div class="demo-wave">
+                            <div class="wave-line"></div>
+                            <div class="wave-line"></div>
+                            <div class="wave-line"></div>
+                        </div>
+                        <p>Hiệu ứng sóng</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Matrix</h4>
+                        <div class="demo-matrix">
+                            <div class="matrix-char">0</div>
+                            <div class="matrix-char">1</div>
+                            <div class="matrix-char">0</div>
+                            <div class="matrix-char">1</div>
+                        </div>
+                        <p>Hiệu ứng Matrix</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

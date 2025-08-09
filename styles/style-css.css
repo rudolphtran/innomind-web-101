@@ -139,3 +139,1102 @@ p {
   height: 50px;
   top: 0;
 }
+
+#display-container{
+  display: block;
+  background-color: lightgray;
+}
+
+#display-inline{
+  display: inline;
+  background-color: lightblue;
+  width: 100px; /* Không có tác dụng với display: inline */
+  height: 50px; /* Không có tác dụng với display: inline */
+}
+
+#display-block{
+  display: block;
+  background-color: lightcoral;
+  width: 100px; /* Có tác dụng với display: block */
+  height: 50px; /* Có tác dụng với display: block */
+}
+
+#display-inline-block{
+  display: inline-block;
+  background-color: lightgreen;
+  width: 400px; /* Có tác dụng với display: inline-block */
+  height: 50px; /* Có tác dụng với display: inline-block */
+}
+
+
+#display-none{
+  display: none;
+  background-color: lightyellow;
+}
+
+.margin-auto {
+  background-color: mediumslateblue;
+  margin: 0 auto;
+  /* margin-top: 0px
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto; */
+  padding: 10px;
+  width: 100px;
+}
+
+.display-item{
+  width: 200px;
+  height: 100px;
+}
+
+.flex-box-container {
+  background-color: lightgray; /* Màu nền của container */
+  height: 500px; /* Chiều cao của container bằng chiều cao của viewport */
+  display: flex; /* Thiết lập chế độ Flexbox */
+  flex-direction: row; /*(row | column) Hướng của các phần tử con */
+  //justify-content: space-around; /*khoảng trống giữa các phần tử con và cạnh của container */
+  justify-content: center; /* Căn giữa các phần tử con theo chiều ngang*/
+  //justify-content: flex-start; /* Căn trái các phần tử con theo chiều ngang*/
+  //justify-content: flex-end; /* Căn phải các phần tử con theo chiều ngang */
+  //justify-content: space-between; /* Khoảng cách đều giữa các phần tử con */
+  //justify-content: space-evenly; Khoảng cách đều giữa các phần tử con và cạnh của container */
+
+  flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng nếu không đủ không gian */
+  //flex-wrap: nowrap; /* /* Không cho phép các phần tử con xuống dòng */
+  align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+}
+
+#flex-item-1 {
+  background-color: lightcoral; /* Màu nền của phần tử */
+  flex-grow: 0; /* Phần tử này sẽ chiếm không gian còn lại */
+  flex-shrink: 1; /* Phần tử này sẽ co lại nếu không gian không đủ */
+  flex-basis: 100px; /* Kích thước cơ bản của phần tử*/
+}
+
+#flex-item-2 {
+  background-color: lightblue; /* Màu nền của phần tử */
+  flex-grow: 1; /* Phần tử này sẽ chiếm gấp đôi không gian còn lại */
+  flex-shrink: 1;
+
+}
+
+#flex-item-3 {
+  background-color: lightgreen; /* Màu nền của phần tử */
+  flex-grow: 0; /* Phần tử này sẽ chiếm gấp ba không gian còn lại */
+}
+
+.flex-item {
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px solid #000; /* Đường viền */
+  width: 100px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+/* ===== CSS TRANSFORM STYLES ===== */
+
+/* Reset và cấu hình cơ bản */
+.transform-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.transform-page {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: none;
+    opacity: 1;
+    color: white;
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+    color: white;
+}
+
+.content {
+    padding: 40px;
+    background: white;
+    margin: 0;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    color: #667eea;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+    padding-left: 15px;
+    background: none;
+    text-align: left;
+}
+
+.section h3 {
+    color: #764ba2;
+    font-size: 1.5rem;
+    margin: 25px 0 15px 0;
+}
+
+.explanation {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #28a745;
+}
+
+.explanation p {
+    background: none;
+    padding: 0;
+    margin-bottom: 10px;
+    color: #333;
+    border-radius: 0;
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.demo-box {
+    background: #fff;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.demo-box:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.demo-box p {
+    background: none;
+    padding: 0;
+    margin: 10px 0;
+    color: #333;
+    border-radius: 0;
+}
+
+.demo-element {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Transform Examples */
+
+/* Translate */
+.translate-example {
+    transform: translate(30px, 20px);
+}
+
+.translateX-example {
+    transform: translateX(40px);
+}
+
+.translateY-example {
+    transform: translateY(-30px);
+}
+
+/* Scale */
+.scale-example {
+    transform: scale(1.3);
+}
+
+.scaleX-example {
+    transform: scaleX(1.5);
+}
+
+.scaleY-example {
+    transform: scaleY(0.7);
+}
+
+/* Rotate */
+.rotate-example {
+    transform: rotate(45deg);
+}
+
+.rotate-negative-example {
+    transform: rotate(-30deg);
+}
+
+/* Skew */
+.skew-example {
+    transform: skew(20deg, 10deg);
+}
+
+.skewX-example {
+    transform: skewX(30deg);
+}
+
+.skewY-example {
+    transform: skewY(15deg);
+}
+
+/* Combined Transforms */
+.combined-example {
+    transform: translate(20px, 10px) rotate(25deg) scale(1.2);
+}
+
+/* Interactive Examples */
+.interactive-demo {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.interactive-demo p {
+    background: none;
+    padding: 0;
+    margin: 20px 0;
+    color: #333;
+    border-radius: 0;
+}
+
+.interactive-element {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    margin: 30px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.interactive-element:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+.hover-translate:hover {
+    transform: translateY(-20px);
+}
+
+.hover-scale:hover {
+    transform: scale(1.3);
+}
+
+.hover-rotate:hover {
+    transform: rotate(180deg);
+}
+
+.hover-skew:hover {
+    transform: skewX(20deg);
+}
+
+/* 3D Transform Examples */
+.transform-3d-container {
+    perspective: 1000px;
+    margin: 30px 0;
+}
+
+.element-3d {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #ff9a56, #ffad56);
+    margin: 50px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.rotateX-3d:hover {
+    transform: rotateX(60deg);
+}
+
+.rotateY-3d:hover {
+    transform: rotateY(60deg);
+}
+
+.rotateZ-3d:hover {
+    transform: rotateZ(60deg);
+}
+
+.translate3d:hover {
+    transform: translate3d(30px, 20px, 50px);
+}
+
+/* Animation Examples */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated-spin {
+    animation: spin 2s linear infinite;
+}
+
+.animated-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animated-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.code-example {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.property {
+    color: #63b3ed;
+}
+
+.value {
+    color: #68d391;
+}
+
+.comment {
+    color: #a0aec0;
+    font-style: italic;
+}
+
+.origin-demo {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    margin: 50px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.origin-demo::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.origin-center {
+    transform-origin: center;
+}
+
+.origin-center:hover {
+    transform: rotate(45deg);
+}
+
+.origin-top-left {
+    transform-origin: top left;
+}
+
+.origin-top-left:hover {
+    transform: rotate(45deg);
+}
+
+.origin-bottom-right {
+    transform-origin: bottom right;
+}
+
+.origin-bottom-right:hover {
+    transform: rotate(45deg);
+}
+
+.tips {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.tips h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.tips ul {
+    list-style: none;
+}
+
+.tips li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.tips li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #68d391;
+    font-weight: bold;
+}
+
+/* ===== CSS TRANSITION STYLES ===== */
+
+/* Reset và cấu hình cơ bản cho transition page */
+.transition-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.transition-page {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.transition-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.transition-page .header {
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.transition-page .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: none;
+    opacity: 1;
+    color: white;
+}
+
+.transition-page .header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+    color: white;
+}
+
+.transition-page .content {
+    padding: 40px;
+    background: white;
+    margin: 0;
+}
+
+.transition-page .section {
+    margin-bottom: 50px;
+}
+
+.transition-page .section h2 {
+    color: #f5576c;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 4px solid #f5576c;
+    padding-left: 15px;
+    background: none;
+    text-align: left;
+}
+
+.transition-page .section h3 {
+    color: #f093fb;
+    font-size: 1.5rem;
+    margin: 25px 0 15px 0;
+}
+
+.transition-page .explanation {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #f093fb;
+}
+
+.transition-page .explanation p {
+    background: none;
+    padding: 0;
+    margin-bottom: 10px;
+    color: #333;
+    border-radius: 0;
+}
+
+.transition-page .demo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.transition-page .demo-box {
+    background: #fff;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.transition-page .demo-box:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.transition-page .demo-box p {
+    background: none;
+    padding: 0;
+    margin: 10px 0;
+    color: #333;
+    border-radius: 0;
+}
+
+.transition-page .demo-element {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Duration Examples */
+.duration-fast {
+    transition: all 0.1s ease;
+}
+
+.duration-fast:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.duration-medium {
+    transition: all 0.5s ease;
+}
+
+.duration-medium:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.duration-slow {
+    transition: all 1s ease;
+}
+
+.duration-slow:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.duration-very-slow {
+    transition: all 2s ease;
+}
+
+.duration-very-slow:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+/* Timing Function Examples */
+.timing-ease {
+    transition: transform 0.5s ease;
+}
+
+.timing-ease:hover {
+    transform: translateX(50px);
+}
+
+.timing-linear {
+    transition: transform 0.5s linear;
+}
+
+.timing-linear:hover {
+    transform: translateX(50px);
+}
+
+.timing-ease-in {
+    transition: transform 0.5s ease-in;
+}
+
+.timing-ease-in:hover {
+    transform: translateX(50px);
+}
+
+.timing-ease-out {
+    transition: transform 0.5s ease-out;
+}
+
+.timing-ease-out:hover {
+    transform: translateX(50px);
+}
+
+.timing-ease-in-out {
+    transition: transform 0.5s ease-in-out;
+}
+
+.timing-ease-in-out:hover {
+    transform: translateX(50px);
+}
+
+.timing-cubic-bezier {
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.timing-cubic-bezier:hover {
+    transform: translateX(50px) scale(1.1);
+}
+
+/* Delay Examples */
+.delay-none {
+    transition: all 0.3s ease 0s;
+}
+
+.delay-none:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.delay-short {
+    transition: all 0.3s ease 0.2s;
+}
+
+.delay-short:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.delay-medium {
+    transition: all 0.3s ease 0.5s;
+}
+
+.delay-medium:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.delay-long {
+    transition: all 0.3s ease 1s;
+}
+
+.delay-long:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+/* Property-specific Transitions */
+.property-background {
+    transition: background-color 0.3s ease;
+}
+
+.property-background:hover {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.property-transform {
+    transition: transform 0.5s ease-out;
+}
+
+.property-transform:hover {
+    transform: rotate(180deg) scale(1.1);
+}
+
+.property-size {
+    transition: width 0.4s ease, height 0.4s ease;
+    width: 80px;
+    height: 80px;
+}
+
+.property-size:hover {
+    width: 100px;
+    height: 100px;
+}
+
+.property-border {
+    transition: border-radius 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.property-border:hover {
+    border-radius: 50%;
+}
+
+/* Multiple Transitions */
+.multiple-bg-transform {
+    transition: 
+        background-color 0.2s ease,
+        transform 0.5s ease-out;
+}
+
+.multiple-bg-transform:hover {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    transform: rotate(45deg) scale(1.1);
+}
+
+.multiple-complex {
+    transition: 
+        width 0.3s ease,
+        height 0.4s ease-in,
+        background-color 0.2s linear,
+        border-radius 0.5s ease-out;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.multiple-complex:hover {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #ffecd2, #fcb69f);
+    border-radius: 50%;
+}
+
+.multiple-sequence {
+    transition: 
+        transform 0.3s ease 0s,
+        background-color 0.3s ease 0.3s,
+        border-radius 0.3s ease 0.6s;
+}
+
+.multiple-sequence:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #a8caba, #5d4e75);
+    border-radius: 50%;
+}
+
+/* Practical Examples */
+.demo-button {
+    background: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.demo-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.demo-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.demo-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.demo-card h5 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.demo-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.demo-loading {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #f093fb;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.demo-progress {
+    width: 200px;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.demo-progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    border-radius: 10px;
+    width: 30%;
+    transition: width 1s ease-out;
+}
+
+.demo-progress:hover .demo-progress-fill {
+    width: 100%;
+}
+
+/* Advanced Techniques */
+.stagger-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.stagger-item {
+    width: 20px;
+    height: 60px;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stagger-container:hover .stagger-item:nth-child(1) {
+    transform: translateY(-20px);
+    transition-delay: 0s;
+}
+
+.stagger-container:hover .stagger-item:nth-child(2) {
+    transform: translateY(-20px);
+    transition-delay: 0.1s;
+}
+
+.stagger-container:hover .stagger-item:nth-child(3) {
+    transform: translateY(-20px);
+    transition-delay: 0.2s;
+}
+
+.stagger-container:hover .stagger-item:nth-child(4) {
+    transform: translateY(-20px);
+    transition-delay: 0.3s;
+}
+
+.morph-shape {
+    transition: 
+        border-radius 0.5s ease,
+        transform 0.5s ease,
+        background 0.5s ease;
+    border-radius: 10px;
+}
+
+.morph-shape:hover {
+    border-radius: 50%;
+    transform: rotate(180deg) scale(1.2);
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.text-effect {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5576c;
+    cursor: pointer;
+    transition: 
+        letter-spacing 0.3s ease,
+        transform 0.3s ease,
+        color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.text-effect:hover {
+    letter-spacing: 5px;
+    transform: scale(1.1);
+    color: #f093fb;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 120px;
+    height: 80px;
+    perspective: 1000px;
+    margin: 20px auto;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.flip-front {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+.flip-back {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    transform: rotateY(180deg);
+}
+
+.transition-page .tips {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.transition-page .tips h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.transition-page .tips ul {
+    list-style: none;
+}
+
+.transition-page .tips li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.transition-page .tips li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+}

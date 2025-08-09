@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition - Hiệu ứng chuyển đổi</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="transition-page">
+    <div class="container">
+        <div class="header">
+            <h1>CSS Transition</h1>
+            <p>Tạo hiệu ứng chuyển đổi mượt mà cho website</p>
+        </div>
+
+        <div class="content">
+
+            <!-- Cú pháp cơ bản -->
+            <div class="section">
+                <h2>1. Cú pháp cơ bản</h2>
+                <div class="explanation">
+                    <p>Transition có 4 thuộc tính chính:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>transition-property:</strong> Thuộc tính nào sẽ được áp dụng transition</li>
+                        <li><strong>transition-duration:</strong> Thời gian của transition</li>
+                        <li><strong>transition-timing-function:</strong> Hàm thời gian (ease, linear, v.v.)</li>
+                        <li><strong>transition-delay:</strong> Độ trễ trước khi bắt đầu transition</li>
+                    </ul>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Cú pháp đầy đủ */</span>
+<span class="property">transition-property</span>: <span class="value">background-color</span>;
+<span class="property">transition-duration</span>: <span class="value">0.3s</span>;
+<span class="property">transition-timing-function</span>: <span class="value">ease</span>;
+<span class="property">transition-delay</span>: <span class="value">0s</span>;
+
+<span class="comment">/* Cú pháp ngắn gọn */</span>
+<span class="property">transition</span>: <span class="value">background-color 0.3s ease 0s</span>;
+
+<span class="comment">/* Nhiều properties */</span>
+<span class="property">transition</span>: <span class="value">all 0.3s ease</span>;
+                </div>
+            </div>
+
+            <!-- Duration - Thời gian -->
+            <div class="section">
+                <h2>2. Duration - Thời gian transition</h2>
+                <div class="explanation">
+                    <p>Duration xác định thời gian diễn ra transition. Có thể sử dụng đơn vị giây (s) hoặc mili giây (ms).</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>0.1s - Nhanh</h4>
+                        <div class="demo-element duration-fast">0.1s</div>
+                        <p>Transition rất nhanh</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>0.5s - Vừa phải</h4>
+                        <div class="demo-element duration-medium">0.5s</div>
+                        <p>Transition vừa phải</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>1s - Chậm</h4>
+                        <div class="demo-element duration-slow">1s</div>
+                        <p>Transition chậm</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>2s - Rất chậm</h4>
+                        <div class="demo-element duration-very-slow">2s</div>
+                        <p>Transition rất chậm</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Duration Examples */</span>
+.<span class="property">fast</span> { <span class="property">transition</span>: <span class="value">all 0.1s ease</span>; }
+.<span class="property">medium</span> { <span class="property">transition</span>: <span class="value">all 0.5s ease</span>; }
+.<span class="property">slow</span> { <span class="property">transition</span>: <span class="value">all 1s ease</span>; }
+.<span class="property">very-slow</span> { <span class="property">transition</span>: <span class="value">all 2s ease</span>; }
+                </div>
+            </div>
+
+            <!-- Timing Functions -->
+            <div class="section">
+                <h2>3. Timing Functions - Hàm thời gian</h2>
+                <div class="explanation">
+                    <p>Timing function xác định tốc độ thay đổi của transition theo thời gian.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>ease (mặc định)</h4>
+                        <div class="demo-element timing-ease">ease</div>
+                        <p>Chậm → Nhanh → Chậm</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>linear</h4>
+                        <div class="demo-element timing-linear">linear</div>
+                        <p>Tốc độ đều</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>ease-in</h4>
+                        <div class="demo-element timing-ease-in">ease-in</div>
+                        <p>Chậm → Nhanh</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>ease-out</h4>
+                        <div class="demo-element timing-ease-out">ease-out</div>
+                        <p>Nhanh → Chậm</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>ease-in-out</h4>
+                        <div class="demo-element timing-ease-in-out">ease-in-out</div>
+                        <p>Chậm → Nhanh → Chậm</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>cubic-bezier</h4>
+                        <div class="demo-element timing-cubic-bezier">custom</div>
+                        <p>Tùy chỉnh đường cong</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Timing Functions */</span>
+<span class="property">transition-timing-function</span>: <span class="value">ease</span>; <span class="comment">/* Mặc định */</span>
+<span class="property">transition-timing-function</span>: <span class="value">linear</span>; <span class="comment">/* Tốc độ đều */</span>
+<span class="property">transition-timing-function</span>: <span class="value">ease-in</span>; <span class="comment">/* Chậm rồi nhanh */</span>
+<span class="property">transition-timing-function</span>: <span class="value">ease-out</span>; <span class="comment">/* Nhanh rồi chậm */</span>
+<span class="property">transition-timing-function</span>: <span class="value">ease-in-out</span>; <span class="comment">/* Chậm-nhanh-chậm */</span>
+<span class="property">transition-timing-function</span>: <span class="value">cubic-bezier(0.68, -0.55, 0.265, 1.55)</span>; <span class="comment">/* Tùy chỉnh */</span>
+                </div>
+            </div>
+
+            <!-- Delay - Độ trễ -->
+            <div class="section">
+                <h2>4. Delay - Độ trễ</h2>
+                <div class="explanation">
+                    <p>Delay tạo độ trễ trước khi transition bắt đầu. Rất hữu ích để tạo hiệu ứng nối tiếp.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Không delay</h4>
+                        <div class="demo-element delay-none">0s</div>
+                        <p>Bắt đầu ngay lập tức</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Delay 0.2s</h4>
+                        <div class="demo-element delay-short">0.2s</div>
+                        <p>Trễ 0.2 giây</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Delay 0.5s</h4>
+                        <div class="demo-element delay-medium">0.5s</div>
+                        <p>Trễ 0.5 giây</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Delay 1s</h4>
+                        <div class="demo-element delay-long">1s</div>
+                        <p>Trễ 1 giây</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Delay Examples */</span>
+<span class="property">transition</span>: <span class="value">all 0.3s ease 0s</span>; <span class="comment">/* Không delay */</span>
+<span class="property">transition</span>: <span class="value">all 0.3s ease 0.2s</span>; <span class="comment">/* Delay 0.2s */</span>
+<span class="property">transition</span>: <span class="value">all 0.3s ease 0.5s</span>; <span class="comment">/* Delay 0.5s */</span>
+<span class="property">transition</span>: <span class="value">all 0.3s ease 1s</span>; <span class="comment">/* Delay 1s */</span>
+                </div>
+            </div>
+
+            <!-- Transition Properties -->
+            <div class="section">
+                <h2>5. Transition Properties - Thuộc tính cụ thể</h2>
+                <div class="explanation">
+                    <p>Bạn có thể áp dụng transition cho từng thuộc tính cụ thể thay vì dùng "all".</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Background Color</h4>
+                        <div class="demo-element property-background">Background</div>
+                        <p>Chỉ transition màu nền</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Transform</h4>
+                        <div class="demo-element property-transform">Transform</div>
+                        <p>Chỉ transition transform</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Width & Height</h4>
+                        <div class="demo-element property-size">Size</div>
+                        <p>Chỉ transition kích thước</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Border Radius</h4>
+                        <div class="demo-element property-border">Border</div>
+                        <p>Chỉ transition border-radius</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Specific Properties */</span>
+<span class="property">transition</span>: <span class="value">background-color 0.3s ease</span>;
+<span class="property">transition</span>: <span class="value">transform 0.5s ease-out</span>;
+<span class="property">transition</span>: <span class="value">width 0.4s ease, height 0.4s ease</span>;
+<span class="property">transition</span>: <span class="value">border-radius 0.3s ease-in-out</span>;
+                </div>
+            </div>
+
+            <!-- Multiple Transitions -->
+            <div class="section">
+                <h2>6. Multiple Transitions - Nhiều transition</h2>
+                <div class="explanation">
+                    <p>Bạn có thể áp dụng nhiều transition với thời gian và timing function khác nhau.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Background + Transform</h4>
+                        <div class="demo-element multiple-bg-transform">Multi 1</div>
+                        <p>Màu nền nhanh, transform chậm</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Size + Border + Color</h4>
+                        <div class="demo-element multiple-complex">Multi 2</div>
+                        <p>Nhiều thuộc tính khác timing</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Sequenced Transitions</h4>
+                        <div class="demo-element multiple-sequence">Multi 3</div>
+                        <p>Các transition nối tiếp nhau</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Multiple Transitions */</span>
+<span class="property">transition</span>: 
+    <span class="value">background-color 0.2s ease,
+    transform 0.5s ease-out</span>;
+
+<span class="property">transition</span>: 
+    <span class="value">width 0.3s ease,
+    height 0.4s ease-in,
+    background-color 0.2s linear,
+    border-radius 0.5s ease-out</span>;
+                </div>
+            </div>
+
+            <!-- Practical Examples -->
+            <div class="section">
+                <h2>7. Ví dụ thực tế</h2>
+                <div class="explanation">
+                    <p>Các ví dụ transition thường được sử dụng trong thiết kế web thực tế.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Button Hover</h4>
+                        <div class="demo-button">Click Me!</div>
+                        <p>Button với hiệu ứng hover</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Card Hover</h4>
+                        <div class="demo-card">
+                            <h5>Card Title</h5>
+                            <p>Card content here</p>
+                        </div>
+                        <p>Card nâng lên khi hover</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Loading Animation</h4>
+                        <div class="demo-loading"></div>
+                        <p>Hiệu ứng loading</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Progress Bar</h4>
+                        <div class="demo-progress">
+                            <div class="demo-progress-fill"></div>
+                        </div>
+                        <p>Thanh tiến trình</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Button Hover */</span>
+.<span class="property">button</span> {
+    <span class="property">transition</span>: <span class="value">background-color 0.3s ease, transform 0.2s ease</span>;
+}
+.<span class="property">button</span>:<span class="value">hover</span> {
+    <span class="property">background-color</span>: <span class="value">#0056b3</span>;
+    <span class="property">transform</span>: <span class="value">translateY(-2px)</span>;
+}
+
+<span class="comment">/* Card Hover */</span>
+.<span class="property">card</span> {
+    <span class="property">transition</span>: <span class="value">box-shadow 0.3s ease, transform 0.3s ease</span>;
+}
+.<span class="property">card</span>:<span class="value">hover</span> {
+    <span class="property">box-shadow</span>: <span class="value">0 10px 20px rgba(0,0,0,0.2)</span>;
+    <span class="property">transform</span>: <span class="value">translateY(-5px)</span>;
+}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

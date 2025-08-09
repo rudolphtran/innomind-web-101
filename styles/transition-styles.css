@@ -1,0 +1,573 @@
+/* ===== TRANSITION STYLES - CÁC STYLE VỀ CSS TRANSITION ===== */
+
+/* Reset và cấu hình cơ bản cho transition page */
+.transition-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.transition-page {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.transition-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.transition-page .header {
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.transition-page .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: none;
+    opacity: 1;
+    color: white;
+}
+
+.transition-page .header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+    color: white;
+}
+
+.transition-page .content {
+    padding: 40px;
+    background: white;
+    margin: 0;
+}
+
+.transition-page .section {
+    margin-bottom: 50px;
+}
+
+.transition-page .section h2 {
+    color: #f5576c;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 4px solid #f5576c;
+    padding-left: 15px;
+    background: none;
+    text-align: left;
+}
+
+.transition-page .section h3 {
+    color: #f093fb;
+    font-size: 1.5rem;
+    margin: 25px 0 15px 0;
+}
+
+.transition-page .explanation {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #f093fb;
+}
+
+.transition-page .explanation p {
+    background: none;
+    padding: 0;
+    margin-bottom: 10px;
+    color: #333;
+    border-radius: 0;
+}
+
+.transition-page .demo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.transition-page .demo-box {
+    background: #fff;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.transition-page .demo-box:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.transition-page .demo-box p {
+    background: none;
+    padding: 0;
+    margin: 10px 0;
+    color: #333;
+    border-radius: 0;
+}
+
+.transition-page .demo-element {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Duration Examples */
+.duration-fast {
+    transition: all 0.1s ease;
+}
+
+.duration-fast:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.duration-medium {
+    transition: all 0.5s ease;
+}
+
+.duration-medium:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.duration-slow {
+    transition: all 1s ease;
+}
+
+.duration-slow:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.duration-very-slow {
+    transition: all 2s ease;
+}
+
+.duration-very-slow:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+/* Timing Function Examples */
+.timing-ease {
+    transition: transform 0.5s ease;
+}
+
+.timing-ease:hover {
+    transform: translateX(50px);
+}
+
+.timing-linear {
+    transition: transform 0.5s linear;
+}
+
+.timing-linear:hover {
+    transform: translateX(50px);
+}
+
+.timing-ease-in {
+    transition: transform 0.5s ease-in;
+}
+
+.timing-ease-in:hover {
+    transform: translateX(50px);
+}
+
+.timing-ease-out {
+    transition: transform 0.5s ease-out;
+}
+
+.timing-ease-out:hover {
+    transform: translateX(50px);
+}
+
+.timing-ease-in-out {
+    transition: transform 0.5s ease-in-out;
+}
+
+.timing-ease-in-out:hover {
+    transform: translateX(50px);
+}
+
+.timing-cubic-bezier {
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.timing-cubic-bezier:hover {
+    transform: translateX(50px) scale(1.1);
+}
+
+/* Delay Examples */
+.delay-none {
+    transition: all 0.3s ease 0s;
+}
+
+.delay-none:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.delay-short {
+    transition: all 0.3s ease 0.2s;
+}
+
+.delay-short:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.delay-medium {
+    transition: all 0.3s ease 0.5s;
+}
+
+.delay-medium:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.delay-long {
+    transition: all 0.3s ease 1s;
+}
+
+.delay-long:hover {
+    transform: rotate(90deg);
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+/* Property-specific Transitions */
+.property-background {
+    transition: background-color 0.3s ease;
+}
+
+.property-background:hover {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.property-transform {
+    transition: transform 0.5s ease-out;
+}
+
+.property-transform:hover {
+    transform: rotate(180deg) scale(1.1);
+}
+
+.property-size {
+    transition: width 0.4s ease, height 0.4s ease;
+    width: 80px;
+    height: 80px;
+}
+
+.property-size:hover {
+    width: 100px;
+    height: 100px;
+}
+
+.property-border {
+    transition: border-radius 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.property-border:hover {
+    border-radius: 50%;
+}
+
+/* Multiple Transitions */
+.multiple-bg-transform {
+    transition: 
+        background-color 0.2s ease,
+        transform 0.5s ease-out;
+}
+
+.multiple-bg-transform:hover {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    transform: rotate(45deg) scale(1.1);
+}
+
+.multiple-complex {
+    transition: 
+        width 0.3s ease,
+        height 0.4s ease-in,
+        background-color 0.2s linear,
+        border-radius 0.5s ease-out;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.multiple-complex:hover {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #ffecd2, #fcb69f);
+    border-radius: 50%;
+}
+
+.multiple-sequence {
+    transition: 
+        transform 0.3s ease 0s,
+        background-color 0.3s ease 0.3s,
+        border-radius 0.3s ease 0.6s;
+}
+
+.multiple-sequence:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #a8caba, #5d4e75);
+    border-radius: 50%;
+}
+
+/* Practical Examples */
+.demo-button {
+    background: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.demo-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.demo-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.demo-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.demo-card h5 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.demo-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.demo-loading {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #f093fb;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.demo-progress {
+    width: 200px;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.demo-progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    border-radius: 10px;
+    width: 30%;
+    transition: width 1s ease-out;
+}
+
+.demo-progress:hover .demo-progress-fill {
+    width: 100%;
+}
+
+/* Advanced Techniques */
+.stagger-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.stagger-item {
+    width: 20px;
+    height: 60px;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stagger-container:hover .stagger-item:nth-child(1) {
+    transform: translateY(-20px);
+    transition-delay: 0s;
+}
+
+.stagger-container:hover .stagger-item:nth-child(2) {
+    transform: translateY(-20px);
+    transition-delay: 0.1s;
+}
+
+.stagger-container:hover .stagger-item:nth-child(3) {
+    transform: translateY(-20px);
+    transition-delay: 0.2s;
+}
+
+.stagger-container:hover .stagger-item:nth-child(4) {
+    transform: translateY(-20px);
+    transition-delay: 0.3s;
+}
+
+.morph-shape {
+    transition: 
+        border-radius 0.5s ease,
+        transform 0.5s ease,
+        background 0.5s ease;
+    border-radius: 10px;
+}
+
+.morph-shape:hover {
+    border-radius: 50%;
+    transform: rotate(180deg) scale(1.2);
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.text-effect {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5576c;
+    cursor: pointer;
+    transition: 
+        letter-spacing 0.3s ease,
+        transform 0.3s ease,
+        color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.text-effect:hover {
+    letter-spacing: 5px;
+    transform: scale(1.1);
+    color: #f093fb;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 120px;
+    height: 80px;
+    perspective: 1000px;
+    margin: 20px auto;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.flip-front {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+.flip-back {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    transform: rotateY(180deg);
+}
+
+.transition-page .tips {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.transition-page .tips h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.transition-page .tips ul {
+    list-style: none;
+}
+
+.transition-page .tips li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.transition-page .tips li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+}

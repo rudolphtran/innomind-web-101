@@ -1,0 +1,37 @@
+/* ===== DISPLAY STYLES - CÁC STYLE VỀ DISPLAY ===== */
+
+#display-container{
+  display: block;
+  background-color: lightgray;
+}
+
+#display-inline{
+  display: inline;
+  background-color: lightblue;
+  width: 100px; /* Không có tác dụng với display: inline */
+  height: 50px; /* Không có tác dụng với display: inline */
+}
+
+#display-block{
+  display: block;
+  background-color: lightcoral;
+  width: 100px; /* Có tác dụng với display: block */
+  height: 50px; /* Có tác dụng với display: block */
+}
+
+#display-inline-block{
+  display: inline-block;
+  background-color: lightgreen;
+  width: 400px; /* Có tác dụng với display: inline-block */
+  height: 50px; /* Có tác dụng với display: inline-block */
+}
+
+#display-none{
+  display: none;
+  background-color: lightyellow;
+}
+
+.display-item{
+  width: 200px;
+  height: 100px;
+}

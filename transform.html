@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform - Biến đổi hình học</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="transform-page">
+    <div class="container">
+        <div class="header">
+            <h1>CSS Transform</h1>
+            <p>Khám phá sức mạnh của biến đổi hình học trong CSS</p>
+        </div>
+
+        <div class="content">
+            <!-- Giới thiệu -->
+            <div class="section">
+                <h2>Giới thiệu về CSS Transform</h2>
+                <div class="explanation">
+                    <p><strong>CSS Transform</strong> cho phép bạn thay đổi hình dạng, kích thước, vị trí và hướng của các phần tử HTML mà không ảnh hưởng đến luồng tài liệu (document flow). Điều này có nghĩa là các phần tử khác sẽ không bị đẩy hoặc thay đổi vị trí.</p>
+                    <br>
+                    <p><strong>Ưu điểm:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Hiệu suất cao (được xử lý bởi GPU)</li>
+                        <li>Không ảnh hưởng đến layout</li>
+                        <li>Tạo hiệu ứng động mượt mà</li>
+                        <li>Hỗ trợ biến đổi 2D và 3D</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Translate -->
+            <div class="section">
+                <h2>1. Translate - Di chuyển</h2>
+                <div class="explanation">
+                    <p>Translate di chuyển phần tử từ vị trí hiện tại đến vị trí mới theo các trục X, Y hoặc Z.</p>
+                </div>
+
+                <h3>Các loại Translate:</h3>
+                
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>translate(x, y)</h4>
+                        <div class="demo-element translate-example">Translate</div>
+                        <p>Di chuyển theo cả X và Y</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>translateX()</h4>
+                        <div class="demo-element translateX-example">TranslateX</div>
+                        <p>Di chuyển theo trục X</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>translateY()</h4>
+                        <div class="demo-element translateY-example">TranslateY</div>
+                        <p>Di chuyển theo trục Y</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Translate Examples */</span>
+<span class="property">transform</span>: <span class="value">translate(30px, 20px)</span>; <span class="comment">/* Di chuyển 30px sang phải, 20px xuống */</span>
+<span class="property">transform</span>: <span class="value">translateX(40px)</span>; <span class="comment">/* Di chuyển 40px sang phải */</span>
+<span class="property">transform</span>: <span class="value">translateY(-30px)</span>; <span class="comment">/* Di chuyển 30px lên trên */</span>
+                </div>
+            </div>
+
+            <!-- Scale -->
+            <div class="section">
+                <h2>2. Scale - Thay đổi kích thước</h2>
+                <div class="explanation">
+                    <p>Scale thay đổi kích thước của phần tử. Giá trị 1 là kích thước gốc, nhỏ hơn 1 là thu nhỏ, lớn hơn 1 là phóng to.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>scale()</h4>
+                        <div class="demo-element scale-example">Scale</div>
+                        <p>Thay đổi kích thước đồng đều</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>scaleX()</h4>
+                        <div class="demo-element scaleX-example">ScaleX</div>
+                        <p>Thay đổi chiều rộng</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>scaleY()</h4>
+                        <div class="demo-element scaleY-example">ScaleY</div>
+                        <p>Thay đổi chiều cao</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Scale Examples */</span>
+<span class="property">transform</span>: <span class="value">scale(1.3)</span>; <span class="comment">/* Phóng to 130% */</span>
+<span class="property">transform</span>: <span class="value">scaleX(1.5)</span>; <span class="comment">/* Kéo dài chiều rộng 150% */</span>
+<span class="property">transform</span>: <span class="value">scaleY(0.7)</span>; <span class="comment">/* Thu nhỏ chiều cao còn 70% */</span>
+                </div>
+            </div>
+
+            <!-- Rotate -->
+            <div class="section">
+                <h2>3. Rotate - Xoay</h2>
+                <div class="explanation">
+                    <p>Rotate xoay phần tử quanh một điểm. Đơn vị đo là độ (deg) hoặc radian (rad).</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>rotate(45deg)</h4>
+                        <div class="demo-element rotate-example">Rotate</div>
+                        <p>Xoay thuận chiều kim đồng hồ</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>rotate(-30deg)</h4>
+                        <div class="demo-element rotate-negative-example">Rotate</div>
+                        <p>Xoay ngược chiều kim đồng hồ</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Rotate Examples */</span>
+<span class="property">transform</span>: <span class="value">rotate(45deg)</span>; <span class="comment">/* Xoay 45 độ thuận chiều */</span>
+<span class="property">transform</span>: <span class="value">rotate(-30deg)</span>; <span class="comment">/* Xoay 30 độ ngược chiều */</span>
+<span class="property">transform</span>: <span class="value">rotate(180deg)</span>; <span class="comment">/* Xoay 180 độ (lật ngược) */</span>
+                </div>
+            </div>
+
+            <!-- Skew -->
+            <div class="section">
+                <h2>4. Skew - Làm xiên</h2>
+                <div class="explanation">
+                    <p>Skew làm xiên phần tử theo các trục X và Y, tạo hiệu ứng nghiêng.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>skew(x, y)</h4>
+                        <div class="demo-element skew-example">Skew</div>
+                        <p>Làm xiên theo cả X và Y</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>skewX()</h4>
+                        <div class="demo-element skewX-example">SkewX</div>
+                        <p>Làm xiên theo trục X</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>skewY()</h4>
+                        <div class="demo-element skewY-example">SkewY</div>
+                        <p>Làm xiên theo trục Y</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Skew Examples */</span>
+<span class="property">transform</span>: <span class="value">skew(20deg, 10deg)</span>; <span class="comment">/* Xiên X: 20°, Y: 10° */</span>
+<span class="property">transform</span>: <span class="value">skewX(30deg)</span>; <span class="comment">/* Xiên theo trục X */</span>
+<span class="property">transform</span>: <span class="value">skewY(15deg)</span>; <span class="comment">/* Xiên theo trục Y */</span>
+                </div>
+            </div>
+
+            <!-- Combined Transforms -->
+            <div class="section">
+                <h2>5. Kết hợp nhiều Transform</h2>
+                <div class="explanation">
+                    <p>Bạn có thể kết hợp nhiều transform trong một thuộc tính, các transform sẽ được áp dụng từ trái sang phải.</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Combined Transform</h4>
+                        <div class="demo-element combined-example">Multi</div>
+                        <p>Translate + Rotate + Scale</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Combined Transform */</span>
+<span class="property">transform</span>: <span class="value">translate(20px, 10px) rotate(25deg) scale(1.2)</span>;
+
+<span class="comment">/* Thứ tự thực hiện: */</span>
+<span class="comment">/* 1. Di chuyển 20px sang phải, 10px xuống */</span>
+<span class="comment">/* 2. Xoay 25 độ */</span>
+<span class="comment">/* 3. Phóng to 120% */</span>
+                </div>
+            </div>
+
+            <!-- Interactive Examples -->
+            <div class="section">
+                <h2>6. Ví dụ tương tác (Hover Effects)</h2>
+                <div class="explanation">
+                    <p>Di chuột vào các hộp dưới đây để xem hiệu ứng transform khi hover:</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Hover Translate</h4>
+                        <div class="demo-element hover-translate">Hover me</div>
+                        <p>Di chuyển lên khi hover</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Hover Scale</h4>
+                        <div class="demo-element hover-scale">Hover me</div>
+                        <p>Phóng to khi hover</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Hover Rotate</h4>
+                        <div class="demo-element hover-rotate">Hover me</div>
+                        <p>Xoay khi hover</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Hover Skew</h4>
+                        <div class="demo-element hover-skew">Hover me</div>
+                        <p>Làm xiên khi hover</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Hover Effects */</span>
+.<span class="property">hover-translate</span>:<span class="value">hover</span> {
+    <span class="property">transform</span>: <span class="value">translateY(-20px)</span>;
+}
+
+.<span class="property">hover-scale</span>:<span class="value">hover</span> {
+    <span class="property">transform</span>: <span class="value">scale(1.3)</span>;
+}
+
+.<span class="property">hover-rotate</span>:<span class="value">hover</span> {
+    <span class="property">transform</span>: <span class="value">rotate(180deg)</span>;
+}
+                </div>
+            </div>
+
+            <!-- Transform Origin -->
+            <div class="section">
+                <h2>7. Transform Origin - Điểm gốc biến đổi</h2>
+                <div class="explanation">
+                    <p>Transform-origin xác định điểm gốc cho việc biến đổi. Mặc định là center (50% 50%).</p>
+                </div>
+
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h4>Origin: Center</h4>
+                        <div class="demo-element origin-demo origin-center">Center</div>
+                        <p>Xoay quanh tâm (mặc định)</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Origin: Top Left</h4>
+                        <div class="demo-element origin-demo origin-top-left">Top Left</div>
+                        <p>Xoay quanh góc trên trái</p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Origin: Bottom Right</h4>
+                        <div class="demo-element origin-demo origin-bottom-right">Bottom Right</div>
+                        <p>Xoay quanh góc dưới phải</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+<span class="comment">/* Transform Origin */</span>
+<span class="property">transform-origin</span>: <span class="value">center</span>; <span class="comment">/* 50% 50% - mặc định */</span>
+<span class="property">transform-origin</span>: <span class="value">top left</span>; <span class="comment">/* 0% 0% */</span>
+<span class="property">transform-origin</span>: <span class="value">bottom right</span>; <span class="comment">/* 100% 100% */</span>
+<span class="property">transform-origin</span>: <span class="value">25px 50px</span>; <span class="comment">/* Tọa độ cụ thể */</span>
+                </div>
+            </div>
+
+            <!-- Interactive Demo -->
+            <div class="section">
+                <h2>8. Demo tương tác tổng hợp</h2>
+                <div class="explanation">
+                    <p>Di chuột vào phần tử dưới đây để xem hiệu ứng transform phức hợp:</p>
+                </div>
+
+                <div class="interactive-demo">
+                    <div class="interactive-element">
+                        Hover me!
+                    </div>
+                    <p style="text-align: center; margin-top: 20px;">
+                        Hiệu ứng: Xoay 360° + Phóng to 120% khi hover
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
