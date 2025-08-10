@@ -139,7 +139,11 @@
 
 /* Duration Examples */
 .duration-fast {
-    transition: all 0.1s ease;
+	//transition-property: all;// tất cả mọi thuộc tính đều apply animation
+	//transition-property: background-color;// chỉ áp dụng animation cho background-color. Các thuộc tính khác như width, height,... đều không được áp dụng */
+	//transition-duration: 0.1s; // thời gian thực hiện animation là 0.1 giây
+	//transition-timing-function: ease; // hàm easing là ease */
+    transition: all 0.1s ease-in-out;
 }
 
 .duration-fast:hover {
@@ -252,6 +256,10 @@
 }
 
 .delay-long {
+	/* transition-property: all;
+	transition-duration: 0.3s; // chạy trong 0.3S
+	transition-timing-function: ease; // hàm easing là ease
+	transition-delay: 1s; // delay 1 giây */
     transition: all 0.3s ease 1s;
 }
 

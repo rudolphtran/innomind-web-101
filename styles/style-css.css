@@ -460,11 +460,17 @@ p {
 }
 
 .interactive-element:hover {
-    transform: rotate(360deg) scale(1.2);
+    transform: rotate(360deg) scale(1.2); // xoay 360 độ và phóng to lên 1.2 lần
 }
 
 .hover-translate:hover {
-    transform: translateY(-20px);
+    transform: translateY(-20px); // bay lên trên
+}
+
+// lập trình cho sự kiện hover vào phần từ
+// hover có nghĩa là rê chuột vào phần tử đó.
+.clasname:hover{
+
 }
 
 .hover-scale:hover {
