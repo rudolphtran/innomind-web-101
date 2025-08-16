@@ -20,6 +20,7 @@
     margin: 0 auto;
     background: white;
     border-radius: 10px;
+	//nghĩa là:viền tối ở phía ngoài thẻ 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
 }
@@ -142,7 +143,7 @@
 	//transition-property: all;// tất cả mọi thuộc tính đều apply animation
 	//transition-property: background-color;// chỉ áp dụng animation cho background-color. Các thuộc tính khác như width, height,... đều không được áp dụng */
 	//transition-duration: 0.1s; // thời gian thực hiện animation là 0.1 giây
-	//transition-timing-function: ease; // hàm easing là ease */
+	//transition-timing-function: ease-in-out; // hàm easing là ease */
     transition: all 0.1s ease-in-out;
 }
 
@@ -170,6 +171,9 @@
 }
 
 .duration-very-slow {
+	//transition-property: all; // tất cả mọi thuộc tính (background,.. width, height, size) đều chạy animation
+	//transition-duration: 2s // thời gian để chạy animation là 2s
+	//transition-timing-function: ease; // hàm easing là ease
     transition: all 2s ease;
 }
 
@@ -229,6 +233,8 @@
 
 /* Delay Examples */
 .delay-none {
+	//transition-property: all; // tất cả mọi thuộc tính (background,.. width, height, size) đều chạy animation
+	//transition-delay: 0s; // không có độ trễ
     transition: all 0.3s ease 0s;
 }
 

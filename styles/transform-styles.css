@@ -142,6 +142,8 @@
 
 /* Translate */
 .translate-example {
+	// transform: translateX(30px);
+	// transform: translateY(20px);
     transform: translate(30px, 20px);
 }
 
@@ -224,10 +226,12 @@
     cursor: pointer;
 }
 
+//khi rê chuột qua (hover) một phần từ(element - thẻ) sử dụng class này thì: xoay 360 độ và phóng to 1.2 lần
 .interactive-element:hover {
     transform: rotate(360deg) scale(1.2);
 }
 
+//khi rê chuột qua một phần tử sử dụng class hover-translate thì thay đổi 20px ở trục thẳng đứng (trục Y)
 .hover-translate:hover {
     transform: translateY(-20px);
 }
