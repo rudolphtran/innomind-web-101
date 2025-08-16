@@ -353,7 +353,12 @@
 
 /* Keyframe Examples */
 .keyframe-simple {
-    animation: simple 2s ease-in-out infinite alternate;
+	animation-name: simple;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	//animation: simple 2s ease-in-out infinite alternate;
 }
 
 .keyframe-multi {
