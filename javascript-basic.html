@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Cơ Bản - Syntax, Value, Variable, Data Types, let/const/var, Operators</title>
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/js-basic-styles.css">
+</head>
+
+<body class="js-page">
+	<div class="container">
+		<h1>JavaScript Cơ Bản</h1>
+		<p>Hướng dẫn chi tiết về cú pháp, giá trị, biến, kiểu dữ liệu, let/const/var, toán tử và ví dụ thực tế trong
+			JavaScript.</p>
+
+		<div class="section">
+			<h2>1. Cú pháp JavaScript (Syntax)</h2>
+			<div class="explanation">
+				<p><b>Cú pháp</b> là quy tắc viết mã. JavaScript dùng cho web, cú pháp đơn giản, dễ học.</p>
+				<ul>
+					<li>Mỗi câu lệnh thường kết thúc bằng dấu <b>;</b> (có thể bỏ qua nhưng nên dùng).</li>
+					<li>Chú thích một dòng: <code>// Đây là chú thích</code></li>
+					<li>Chú thích nhiều dòng: <code>/* Đây là chú thích nhiều dòng */</code></li>
+					<li>JavaScript phân biệt chữ hoa và chữ thường.</li>
+					<li>Biến, hàm, từ khóa phải viết đúng quy tắc.</li>
+				</ul>
+			</div>
+			<div class="code-example">
+				// In ra "Hello World" trên console
+				console.log("Hello World");
+			</div>
+			<div class="explanation">
+				<b>Thực tế:</b> Khi bạn mở trang này, hãy nhấn F12 để mở Console và xem kết quả các ví dụ.
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>2. Giá trị (Value)</h2>
+			<div class="explanation">
+				<p>Giá trị là dữ liệu mà biến hoặc biểu thức lưu trữ. Có thể là số, chuỗi, boolean, v.v.</p>
+				<ul>
+					<li><b>Số</b>: 42, 3.14</li>
+					<li><b>Chuỗi</b>: "Xin chào", 'Hello'</li>
+					<li><b>Boolean</b>: true, false</li>
+					<li><b>null</b>: giá trị rỗng</li>
+					<li><b>undefined</b>: chưa xác định</li>
+				</ul>
+			</div>
+			<div class="code-example">
+				42 // số<br/>
+				"Xin chào" // chuỗi<br/>
+				true // boolean<br/>
+				null // giá trị rỗng<br/>
+				undefined // chưa xác định<br/>
+			</div>
+			<div class="explanation">
+				<b>Lưu ý:</b> Chuỗi có thể dùng dấu nháy đơn hoặc nháy kép. Số có thể là số nguyên hoặc số thực.
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>3. Biến (Variable)</h2>
+			<div class="explanation">
+				<p>Biến dùng để lưu trữ giá trị. Có 3 cách khai báo biến: <b>var</b>, <b>let</b>, <b>const</b>.</p>
+				<ul>
+					<li><b>var</b>: kiểu cũ, có thể khai báo lại, có thể "hoisting".</li>
+					<li><b>let</b>: hiện đại, chỉ dùng trong block, không khai báo lại trong cùng phạm vi.</li>
+					<li><b>const</b>: hằng số, không thể gán lại giá trị.</li>
+				</ul>
+			</div>
+			<div class="code-example">
+				var x = 10; // biến kiểu cũ, có thể thay đổi<br/>
+				let y = 20; // biến hiện đại, có thể thay đổi<br/>
+				const PI = 3.14; // hằng số, không thể thay đổi<br/>
+			</div>
+			<div class="explanation">
+				<b>Ví dụ thực tế:</b> Dùng biến để lưu trữ thông tin người dùng, điểm số, trạng thái, v.v.
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>4. Kiểu dữ liệu (Data Types)</h2>
+			<div class="explanation">
+				<p>JavaScript có nhiều kiểu dữ liệu:</p>
+				<ul>
+					<li><b>Number</b>: Số (10, 3.14)</li>
+					<li><b>String</b>: Chuỗi ("Hello")</li>
+					<li><b>Boolean</b>: Đúng/Sai (true/false)</li>
+					<li><b>Null</b>: Không có giá trị</li>
+					<li><b>Undefined</b>: Chưa xác định</li>
+					<li><b>Object</b>: Đối tượng (ví dụ: {name: "An", age: 18})</li>
+					<li><b>Array</b>: Mảng (ví dụ: [8, 9, 10])</li>
+				</ul>
+			</div>
+			<div class="code-example">
+				let age = 18; // Number<br/>
+				let name = "An"; // String<br/>
+				let isStudent = true; // Boolean<br/>
+				let address = null; // Null<br/>
+				let phone; // Undefined<br/>
+				let person = {name: "An", age: 18}; // Object<br/>
+				let scores = [8, 9, 10]; // Array<br/>
+			</div>
+			<div class="explanation">
+				<b>Thực tế:</b> Dùng object để lưu thông tin phức tạp, array để lưu danh sách.
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>5. let, const, var</h2>
+			<div class="explanation">
+				<ul>
+					<li><b>var</b>: Khai báo biến kiểu cũ, có thể bị "hoisting" (được đưa lên đầu phạm vi).</li>
+					<li><b>let</b>: Khai báo biến hiện đại, chỉ dùng trong block, an toàn hơn var.</li>
+					<li><b>const</b>: Khai báo hằng số, không thể gán lại giá trị, dùng cho giá trị cố định.</li>
+				</ul>
+				<p><b>Khuyến nghị:</b> Nên dùng <b>let</b> và <b>const</b> thay cho <b>var</b> để tránh lỗi.</p>
+			</div>
+			<div class="code-example">
+				var a = 1;<br/>
+				let b = 2;<br/>
+				const c = 3;<br/>
+				a = 5; // có thể thay đổi<br/>
+				b = 6; // có thể thay đổi<br/>
+				// c = 7; // lỗi: không thể thay đổi giá trị của const<br/>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>6. Toán tử (Operators)</h2>
+			<div class="explanation">
+				<ul>
+					<li><b>Toán tử số học</b>: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+						<code>%</code></li>
+					<li><b>Toán tử so sánh</b>: <code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>,
+						<code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></li>
+					<li><b>Toán tử logic</b>: <code>&amp;&amp;</code>, <code>||</code>, <code>!</code></li>
+					<li><b>Toán tử gán</b>: <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>,
+						<code>/=</code></li>
+				</ul>
+				<p><b>Lưu ý:</b> <code>===</code> so sánh cả giá trị và kiểu dữ liệu, <code>==</code> chỉ so sánh giá
+					trị.</p>
+			</div>
+			<div class="code-example">
+				let x = 5;<br/>
+				let y = 2;<br/>
+				let sum = x + y; // 7<br/>
+				let isEqual = x == y; // false<br/>
+				let isStrict = x === y; // false<br/>
+				let isGreater = x > y; // true<br/>
+				let isOk = (x > 0) && (y > 0); // true<br/>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>7. Thực hành: In ra giá trị</h2>
+			<div class="explanation">
+				<p>Dùng <code>console.log()</code> để in ra giá trị trong JavaScript. Hãy thử thay đổi giá trị biến và
+					quan sát kết quả trên Console.</p>
+			</div>
+			<div class="code-example">
+				let name = "An";
+				let age = 18;
+				console.log("Tên:", name);
+				console.log("Tuổi:", age);
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>8. Ví dụ thực tế: Nhập tên và tuổi, hiển thị ra màn hình</h2>
+			<div class="explanation">
+				<p>Ví dụ này sử dụng JavaScript để lấy thông tin từ người dùng và hiển thị ra trang web.</p>
+			</div>
+			<form id="infoForm">
+				<label for="yourName">Tên của bạn:</label>
+				<input type="text" id="yourName" name="yourName" required>
+				<label for="yourAge">Tuổi của bạn:</label>
+				<input type="number" id="yourAge" name="yourAge" required>
+				<button type="submit">Hiển thị</button>
+			</form>
+			<div id="result" style="margin-top:20px;font-weight:bold;color:#3867d6;"></div>
+			<div class="code-example">
+				// Xử lý nhập liệu và hiển thị kết quả
+				// (Đã được viết trong file javascript-basic.js)
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>9. Ví dụ thực tế: Cuộn lên đầu trang (Scroll to Top)</h2>
+			<div class="explanation">
+				<p>Ví dụ này tạo một nút bấm, khi nhấn sẽ cuộn trang lên đầu bằng JavaScript.</p>
+			</div>
+			<button id="scrollTopBtn" style="padding:8px 20px;background:#3867d6;color:#fff;border:none;border-radius:5px;cursor:pointer;">Cuộn lên đầu trang</button>
+			<div class="code-example">
+				// Xử lý cuộn lên đầu trang
+				// (Đã được viết trong file javascript-basic.js)
+			</div>
+		</div>
+	</div>
+	<!-- Floating Scroll Top Icon -->
+	<button id="floatingScrollTop" title="Cuộn lên đầu trang" style="position:fixed;right:30px;bottom:30px;width:48px;height:48px;border-radius:50%;background:#3867d6;color:#fff;border:none;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:24px;display:flex;align-items:center;justify-content:center;z-index:999;cursor:pointer;">
+		top
+	</button>
+	<script src="scripts/javascript-basic.js"></script>
+</body>
+
+</html>

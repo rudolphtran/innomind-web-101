@@ -1,0 +1,106 @@
+/* ===== CSS riêng cho trang javascript-basic.html ===== */
+
+.js-page .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 40px;
+}
+
+.js-page h1, .js-page h2 {
+    color: #f7b731;
+}
+
+.js-page h3 {
+    color: #3867d6;
+}
+
+.js-page .section {
+    margin-bottom: 40px;
+}
+
+.js-page .code-example {
+    background: #222f3e;
+    color: #f5f6fa;
+    padding: 18px;
+    border-radius: 8px;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    margin: 18px 0;
+    font-size: 1rem;
+    overflow-x: auto;
+}
+
+.js-page .explanation {
+    background: #f1f2f6;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.js-page ul {
+    margin-left: 20px;
+}
+
+#infoForm {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#infoForm label {
+    margin-right: 5px;
+}
+
+#infoForm input {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#infoForm button {
+    padding: 6px 16px;
+    background: #3867d6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#infoForm button:hover {
+    background: #f7b731;
+    color: #222f3e;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #3867d6;
+}
+
+/* Floating Scroll Top Icon */
+#floatingScrollTop {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: #3867d6;
+	color: #fff;
+	border: none;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+#floatingScrollTop:hover {
+	background: #f7b731;
+	color: #222f3e;
+}
