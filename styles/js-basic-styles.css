@@ -104,3 +104,50 @@
 	background: #f7b731;
 	color: #222f3e;
 }
+
+/* Button đẹp cho các bài tập */
+.exercise button,
+#readMoreBtn,
+#prevBtn,
+#nextBtn {
+	padding: 8px 20px;
+	background: linear-gradient(90deg, #3867d6 60%, #f7b731 100%);
+	color: #fff;
+	border: none;
+	border-radius: 24px;
+	font-size: 1rem;
+	font-weight: 500;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s, transform 0.2s;
+	margin: 8px 6px;
+}
+.exercise button:hover,
+#readMoreBtn:hover,
+#prevBtn:hover,
+#nextBtn:hover {
+	background: linear-gradient(90deg, #f7b731 60%, #3867d6 100%);
+	color: #222f3e;
+	transform: translateY(-2px) scale(1.05);
+}
+
+/* Text button cho nút Xem thêm */
+#readMoreBtn {
+	background: none !important;
+	color: #3867d6 !important;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	padding: 0 8px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color 0.2s, text-decoration 0.2s;
+	margin: 0 4px;
+	text-decoration: underline;
+}
+#readMoreBtn:hover {
+	color: #f7b731 !important;
+	text-decoration: underline wavy;
+	background: none !important;
+}

@@ -41,16 +41,16 @@
 			<div class="explanation">
 				<p>Giá trị là dữ liệu mà biến hoặc biểu thức lưu trữ. Có thể là số, chuỗi, boolean, v.v.</p>
 				<ul>
-					<li><b>Số</b>: 42, 3.14</li>
-					<li><b>Chuỗi</b>: "Xin chào", 'Hello'</li>
+					<li><b>Number</b>: 42, 3.14</li>
+					<li><b>String</b>: "Xin chào", 'Hello'</li>
 					<li><b>Boolean</b>: true, false</li>
-					<li><b>null</b>: giá trị rỗng</li>
-					<li><b>undefined</b>: chưa xác định</li>
+					<li><b>null</b>: null</li>
+					<li><b>undefined</b>: undefined</li>
 				</ul>
 			</div>
 			<div class="code-example">
-				42 // số<br/>
-				"Xin chào" // chuỗi<br/>
+				42 // Number - số<br/>
+				"Xin chào" // String - chuỗi<br/>
 				true // boolean<br/>
 				null // giá trị rỗng<br/>
 				undefined // chưa xác định<br/>
@@ -198,10 +198,84 @@
 				// (Đã được viết trong file javascript-basic.js)
 			</div>
 		</div>
+		<div class="section">
+			<h2>10. DOM Manipulate (Tương tác với DOM)</h2>
+			<div class="explanation">
+				<p><b>DOM (Document Object Model)</b> là mô hình tài liệu HTML dưới dạng đối tượng JavaScript. Bạn có thể dùng JS để thay đổi, thêm, xóa, hoặc thao tác với các phần tử trên trang web.</p>
+				<ul>
+					<li><b>Truy cập phần tử:</b> <code>document.getElementById('id')</code>, <code>document.querySelector('.class')</code></li>
+					<li><b>Thay đổi nội dung:</b> <code>element.textContent = 'Nội dung mới'</code></li>
+					<li><b>Thay đổi style:</b> <code>element.style.color = 'red'</code></li>
+					<li><b>Thêm/xóa class:</b> <code>element.classList.add('active')</code>, <code>element.classList.remove('active')</code></li>
+					<li><b>Tạo mới phần tử:</b> <code>document.createElement('div')</code></li>
+					<li><b>Thêm vào DOM:</b> <code>parent.appendChild(child)</code></li>
+				</ul>
+			</div>
+			<div class="code-example">
+				// Ví dụ: Thay đổi nội dung và màu chữ của một phần tử
+				var demoDom = document.getElementById('domDemo');<br/>
+				demoDom.textContent = 'Nội dung đã thay đổi bằng JavaScript!';<br/>
+				demoDom.style.color = 'red';<br/>
+			</div>
+			<div class="explanation">
+				<b>Demo thực tế:</b>
+			</div>
+			<div style="margin:16px 0;">
+				<span id="domDemo" style="font-weight:bold;">Đây là nội dung ban đầu.</span>
+				<button id="changeDomBtn">Thay đổi nội dung</button>
+			</div>
+		</div>
+		<div class="section">
+			<h2>11. Bài tập JavaScript cuối bài</h2>
+			<div class="explanation">
+				<p>Dưới đây là các bài tập thực hành JavaScript. Hãy thử tự làm trước khi xem lời giải!</p>
+			</div>
+			<div class="exercise">
+				<h3>Bài 1: Tự động chào theo giờ trong ngày</h3>
+				<p>Viết một đoạn mã JavaScript để khi mở trang sẽ tự động hiển thị lời chào phù hợp với giờ hiện tại:
+				<ul>
+					<li>Trước 12h: "Chào buổi sáng!"</li>
+					<li>Từ 12h đến 18h: "Chào buổi trưa!"</li>
+					<li>Sau 18h: "Chào buổi tối!"</li>
+				</ul>
+				</p>
+				<div id="greetingResult" style="font-weight:bold;color:#3867d6;"></div>
+				<div class="solution" style="display:none">
+					<!-- Lời giải sẽ được viết trong file javascript-basic.js -->
+				</div>
+			</div>
+			<div class="exercise">
+				<h3>Bài 2: Image Slider</h3>
+				<p>Tạo một slider ảnh đơn giản với 3 hình. Có nút "Trước" và "Sau" để chuyển qua lại giữa các hình.</p>
+				<div id="sliderContainer" style="margin:20px 0;text-align:center;">
+					<img id="sliderImage" src="images/1.jpg" alt="Slider" style="width:220px;height:140px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+					<br>
+					<button id="prevBtn">Trước</button>
+					<button id="nextBtn">Sau</button>
+				</div>
+				<div class="solution" style="display:none">
+					<!-- Lời giải sẽ được viết trong file javascript-basic.js -->
+				</div>
+			</div>
+			<div class="exercise">
+				<h3>Bài 3: Nút xem thêm</h3>
+				<p>Tạo một đoạn văn bản ngắn, có nút "Xem thêm". Khi nhấn nút sẽ hiện ra phần nội dung mở rộng.</p>
+				<div id="readMoreContainer" style="margin:20px 0;">
+					<span id="shortText">Đây là đoạn giới thiệu ngắn...</span>
+					<span id="moreText" style="display:none"> Đây là phần nội dung mở rộng, bạn có thể thêm thông tin chi tiết ở đây.</span>
+					<button id="readMoreBtn">Xem thêm</button>
+				</div>
+				<div class="solution" style="display:none">
+					<!-- Lời giải sẽ được viết trong file javascript-basic.js -->
+				</div>
+			</div>
+		</div>
+
+		
 	</div>
 	<!-- Floating Scroll Top Icon -->
 	<button id="floatingScrollTop" title="Cuộn lên đầu trang" style="position:fixed;right:30px;bottom:30px;width:48px;height:48px;border-radius:50%;background:#3867d6;color:#fff;border:none;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:24px;display:flex;align-items:center;justify-content:center;z-index:999;cursor:pointer;">
-		top
+		↑
 	</button>
 	<script src="scripts/javascript-basic.js"></script>
 </body>
