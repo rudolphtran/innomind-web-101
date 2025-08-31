@@ -98,63 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 });
 
-// ===== Lời giải bài tập cuối bài giảng =====
-
-// Bài 1: Tự động chào theo giờ trong ngày
-(function() {
-	var greetingDiv = document.getElementById('greetingResult');
-	if (greetingDiv) {
-		var now = new Date();
-		var hour = now.getHours();
-		var greeting = '';
-		if (hour < 12) greeting = 'Chào buổi sáng!';
-		else if (hour < 18) greeting = 'Chào buổi trưa!';
-		else greeting = 'Chào buổi tối!';
-		greetingDiv.textContent = greeting;
-	}
-})();
-
-// Bài 2: Image Slider
-(function() {
-	var images = ['images/1.jpg', 'images/2.jpg', 'images/3.jpg'];
-	var current = 0;
-	var img = document.getElementById('sliderImage');
-	var prevBtn = document.getElementById('prevBtn');
-	var nextBtn = document.getElementById('nextBtn');
-	function showImage(idx) {
-		if (img) img.src = images[idx];
-	}
-	if (prevBtn) {
-		prevBtn.addEventListener('click', function() {
-			current = (current - 1 + images.length) % images.length;
-			showImage(current);
-		});
-	}
-	if (nextBtn) {
-		nextBtn.addEventListener('click', function() {
-			current = (current + 1) % images.length;
-			showImage(current);
-		});
-	}
-	showImage(current);
-})();
-
-// Bài 3: Nút xem thêm
-(function() {
-	var btn = document.getElementById('readMoreBtn');
-	var moreText = document.getElementById('moreText');
-	if (btn && moreText) {
-		btn.addEventListener('click', function() {
-			if (moreText.style.display === 'none') {
-				moreText.style.display = 'inline';
-				btn.textContent = 'Thu gọn';
-			} else {
-				moreText.style.display = 'none';
-				btn.textContent = 'Xem thêm';
-			}
-		});
-	}
-})();
 
 // Ví dụ DOM Manipulate
 (function() {
